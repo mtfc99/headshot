@@ -3,3 +3,12 @@ font-family: roboto;
 background-color: rgba(228, 228, 228, 0.322);
 }
 
+.cards{
+    transition: 0.5s;
+}
+
+.cards:hover{
+    opacity: 80%;
+    transform: scale(1.05);
+    transition: 0.5s;
+}
