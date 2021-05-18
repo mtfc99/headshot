@@ -5,11 +5,26 @@ background-color: rgba(228, 228, 228, 0.322);
 
 .cards{
     transition: 0.5s;
-    
+
 }
 
 .cards:hover{
     opacity: 80%;
     transform: scale(1.05);
     transition: 0.5s;
+}
+
+.btn-wpp{
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    line-height: 82px;
+    bottom: 30px;
+    right: 30px;
+    background-color:darkgreen;
+    color: white;
+    text-align: center;
+    font-size: 55px;
+    border-radius: 100%;
+    
 }
