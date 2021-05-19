@@ -28,3 +28,17 @@ background-color: rgba(228, 228, 228, 0.322);
     border-radius: 100%;
     
 }
+
+#tabla-precios{
+    line-height: 49.4px;
+}
+
+#img-correo{
+    transition: 0.5s;
+}
+#img-correo:hover{
+    transition: 0.5s;
+    transform: scale(1.04);
+    opacity: 75%;
+
+}
