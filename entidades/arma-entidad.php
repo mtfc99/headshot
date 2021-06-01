@@ -4,7 +4,10 @@ class Arma {
     private $idarma;
     private $nombre;
     private $precio;
+    private $categoria;
+    private $descripcion;
     private $imagen;
+    private $imagenmodal;
     private $fk_idcategoria;
 
     public function __construct(){
@@ -119,13 +122,16 @@ class Arma {
         $sql = "SELECT
     idarma,
     nombre,
+    categoria,
     precio,
+    descripcion,
     fk_idcategoria,
-    imagen
+    imagen,
+    imagenmodal
     FROM
     armas 
 
-	ORDER BY idarma DESC";
+	ORDER BY idarma ASC";
 
         $resultado = $mysqli->query($sql);
 
@@ -135,7 +141,10 @@ class Arma {
                 $obj->idarma = $fila["idarma"];
                 $obj->nombre = $fila["nombre"];
                 $obj->precio = $fila["precio"];
+                $obj->categoria = $fila["categoria"];
+                $obj->descripcion = $fila["descripcion"];
                 $obj->imagen = $fila["imagen"];
+                $obj->imagenmodal = $fila["imagenmodal"];
                 $obj->fk_idcategoria = $fila["fk_idcategoria"];
                 $aArmas[] = $obj;
 
