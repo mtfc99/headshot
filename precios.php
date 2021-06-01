@@ -64,7 +64,7 @@
 
         </div>
       </div>
-
+<hr>
       <div class="row">
         <div class="col-md-12">
           <h1 class="text-center my-3">¡Los productos también se pueden retirar por Zona Oeste!</h1>
@@ -74,8 +74,11 @@
           </div>
 
         </div>
+
       
       </div>
+
+      <hr>
     </div>
 
     <div class="container">
