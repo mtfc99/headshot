@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="fontawesome/css/fontawesome.min.css">
         <link rel="stylesheet" href="fontawesome/css/regular.min.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link rel="stylesheet" href="css/estilos.css?v=124">
+        <link rel="stylesheet" href="css/estilos.css?v=1224">
         <script src="js/bootstrap.min.js"></script>
         <script src="js/index.js"></script>
         <link rel="preconnect" href="https://fonts.gstatic.com">

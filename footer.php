@@ -13,7 +13,7 @@
             class="fab fa-facebook-f"></i></a>
         <!-- Twitter -->
         <a class="btn btn-outline-light rounded-circle btn-floating m-1" href="#!" role="button"><i
-            class="fab fa-twitter"></i></a>
+            class="fab fa-youtube"></i></a>
         <!-- Instagram -->
         <a class="btn btn-outline-light rounded-circle btn-floating m-1" href="#!" role="button"><i
             class="fab fa-instagram"></i></a>

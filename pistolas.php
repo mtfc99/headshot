@@ -34,7 +34,7 @@ include 'header.php';
                                     <div>
 
                                         <!-- Button trigger modal -->
-                                        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal<?php echo $pistola->idpistola; ?>">
+                                        <button type="button" class="btn btn-warning rounded-pill" data-toggle="modal" data-target="#exampleModal<?php echo $pistola->idpistola; ?>">
                                             Info
                                         </button>
 
@@ -56,7 +56,7 @@ include 'header.php';
                                                         <p class="text-lead text-center mt-3"><?php echo $pistola->descripcion; ?></p>
                                                     </div>
                                                     <div class="modal-footer">
-                                                        <button type="button" class="btn btn-warning" data-dismiss="modal">Cerrar</button>
+                                                        <button type="button" class="btn btn-warning rounded-pill" data-dismiss="modal">Cerrar</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -74,6 +74,8 @@ include 'header.php';
 
         <div class="container">
             <a href="https://api.whatsapp.com/send?phone=+5491138950670&text=Hola Headshot 3D! Quisiera más información sobre un artículo" target="_blank" class="btn-wpp"><i class="fab fa-whatsapp p-1" style="color: white;"></i></a>
+            <a href="https://instagram.com/headshot.3d" target="_blank" class="btn-ig"><i class="fab fa-instagram p-1" style="color: white;"></i></a>
+
         </div>
 
         <br><br><br><br><br><br><br><br><br><br>

@@ -67,7 +67,7 @@
                     <p class="text-center display-6">Otras Armas</p>
                     <hr>
                     <p class="text-muted text-center">También vendemos armas que hicimos muy pocas veces o que nunca hicimos. Si no encontrás la que buscás, la hacemos igual.</p>
-                    <a href="precios.php" class="text-center"><button class="btn btn-dark rounded-pill mt-5 px-5">¡Comunicate!</button></a>
+                    <a href="https://api.whatsapp.com/send?phone=+5491138950670&text=Hola Headshot 3D! Quisiera más información sobre un artículo" target="_blank" class="text-center"><button class="btn btn-dark rounded-pill mt-5 px-5">¡Comunicate!</button></a>
                 </div>
 
             </div>
@@ -77,7 +77,7 @@
                     <p class="text-center display-6">Objetos</p>
                     <hr>
                     <p class="text-muted text-center">¡También realizamos cualquier tipo de objetos en 3D! Comunicate con nosotros por cualquier consulta que tengas.</p>
-                    <a href="precios.php" class="text-center"><button class="btn btn-dark rounded-pill mt-5 px-5">¡Comunicate!</button></a>
+                    <a href="https://api.whatsapp.com/send?phone=+5491138950670&text=Hola Headshot 3D! Quisiera más información sobre un artículo" target="_blank" class="text-center"><button class="btn btn-dark rounded-pill mt-5 px-5">¡Comunicate!</button></a>
                 </div>
 
             </div>
@@ -88,7 +88,11 @@
                     <hr>
                     <p class="text-muted text-center">Deseamos darle a los clientes comodidad a la hora de comprar, por eso aceptamos diversos métodos de pago.</p>
                     <button type="button" class="btn btn-dark rounded-pill mt-5 px-5" data-toggle="modal" data-target="#modalPagos">Medios de Pago</button>
-                    <div class="modal fade" id="modalPagos" tabindex="-1" role="dialog" aria-labelledby="modalPagosCenterTitle" aria-hidden="true">
+                   
+                </div>
+
+            </div>
+            <div class="modal fade" id="modalPagos" tabindex="-1" role="dialog" aria-labelledby="modalPagosCenterTitle" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered" role="document">
 
                             <div class="modal-content">
@@ -98,19 +102,18 @@
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
-                                <div class="modal-body">
+                                <div class="modal-body text-center">
                                     <img class="img-fluid" src="images/mediosdepago.png" alt="">
                                     <p class="text-lead text-center mt-3">Aceptamos pagos por Mercado Pago, Paypal, o efectivo.</p>
+                                    <small class="text-muted">Con cualquier medio de pago podés elegir entre pagar el 100% del valor del producto,
+                                    o pagar la seña del 50% y el resto cuando el arma está terminada.</small>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-warning" data-dismiss="modal">Cerrar</button>
+                                    <button type="button" class="btn btn-dark" data-dismiss="modal">Cerrar</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
-            </div>
 
         </div>
 
@@ -118,6 +121,7 @@
 
     <div class="container">
         <a href="https://api.whatsapp.com/send?phone=+5491138950670&text=Hola Headshot 3D! Quisiera más información sobre un artículo" target="_blank" class="btn-wpp"><i class="fab fa-whatsapp p-1" style="color: white;"></i></a>
+        <a href="https://instagram.com/headshot.3d" target="_blank" class="btn-ig"><i class="fab fa-instagram p-1" style="color: white;"></i></a>
     </div>
     <br>
     <div class="container card shadow-lg">
