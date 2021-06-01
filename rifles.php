@@ -5,7 +5,7 @@ include_once 'entidades/rifle-entidad.php';
 $rifle = new Rifle;
 $aRifles = $rifle->obtenerTodos();
 
-
+$title='Rifles';
 include 'header.php';
 ?>
 

@@ -1,4 +1,6 @@
-<?php include 'header.php';?>
+<?php 
+$title='Envíos y Precios';
+include 'header.php';?>
 
 
   <body>

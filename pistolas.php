@@ -5,7 +5,7 @@ include_once 'entidades/pistola-entidad.php';
 $pistola = new Pistola;
 $aPistolas = $pistola->obtenerTodos();
 
-
+$title='Pistolas';
 include 'header.php';
 ?>
 

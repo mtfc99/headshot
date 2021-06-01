@@ -1,4 +1,4 @@
-<?php include 'header.php';?>
+<?php $title='Quienes Somos'; include 'header.php';?>
   <br>
   <body>
 

@@ -1,4 +1,6 @@
-<?php include 'header.php'; ?>
+<?php 
+$title='Headshot 3D';
+include 'header.php'; ?>
 
 
 <body>
@@ -109,7 +111,7 @@
                                     o pagar la seña del 50% y el resto cuando el arma está terminada.</small>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-dark" data-dismiss="modal">Cerrar</button>
+                                    <button type="button" class="btn btn-dark rounded-pill" data-dismiss="modal">Cerrar</button>
                                 </div>
                             </div>
                         </div>

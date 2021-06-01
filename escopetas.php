@@ -5,7 +5,7 @@ include_once 'entidades/escopeta-entidad.php';
 $escopeta = new Escopeta;
 $aEscopetas = $escopeta->obtenerTodos();
 
-
+$title='Escopetas';
 include 'header.php';
 
 ?>
@@ -71,8 +71,13 @@ include 'header.php';
             <?php endforeach; ?>
         </div>
     </div>
-
-
+    <div class="container text-center my-5">
+<?php if (empty($aEscopetas)){
+    echo "Lo sentimos. No tenemos ningún producto en esta categoría aún.";
+}  ?>
+<br>
+<img src="images/error.png" class="mb-5" alt="">
+</div>
     <div class="container">
         <a href="https://api.whatsapp.com/send?phone=+5491138950670&text=Hola Headshot 3D! Quisiera más información sobre un artículo" target="_blank" class="btn-wpp"><i class="fab fa-whatsapp p-1" style="color: white;"></i></a>
         <a href="https://instagram.com/headshot.3d" target="_blank" class="btn-ig"><i class="fab fa-instagram p-1" style="color: white;"></i></a>
@@ -81,46 +86,6 @@ include 'header.php';
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <br><br><br><br><br><br><br><br><br><br>
-    <footer class="bg-dark text-white">
-        <!-- Grid container -->
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 mt-4 text-center">
-                    <p>© 2021::Todos los derechos reservados</p>
-                </div>
-                <div class="col-md-6 my-3 text-center">
-                    <!-- Section: Social media -->
-
-                    <!-- Facebook -->
-                    <a class="btn btn-outline-light rounded-circle btn-floating m-1" href="#!" role="button"><i
-                                class="fab fa-facebook-f"></i></a>
-
-                    <!-- Twitter -->
-                    <a class="btn btn-outline-light rounded-circle btn-floating m-1" href="#!" role="button"><i
-                                class="fab fa-twitter"></i></a>
-
-                    <!-- Whatsapp -->
-                    <a class="btn btn-outline-light rounded-circle btn-floating m-1" href="#!" role="button"><i
-                                class="fab fa-whatsapp"></i></a>
-
-                    <!-- Instagram -->
-                    <a class="btn btn-outline-light rounded-circle btn-floating m-1" href="#!" role="button"><i
-                                class="fab fa-instagram"></i></a>
-
-
-                    <!-- Section: Social media -->
-                </div>
-                <div class="col-md-3 mt-4 text-center">
-                    <p>Headshot 3D - 3D Print ®</p>
-
-                </div>
-            </div>
-        </div>
-
-
-
-
-
-    </footer>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <?php include_once 'footer.php'; ?>
     </body>
