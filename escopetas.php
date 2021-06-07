@@ -77,10 +77,13 @@ include 'header.php';
             <?php endforeach; ?>
         </div>
     </div>
-    <div class="container text-center my-5">
-
-
-</div>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-12">
+                <a href="https://api.whatsapp.com/send?phone=+5491138950670&text=Hola Headshot 3D! Quisiera más información sobre una escopeta" target="_blank" rel="noopener noreferrer"><button class="btn btn-success w-100">Consultá</button></a>
+            </div>
+        </div>
+    </div>
     <div class="container">
         <a href="https://api.whatsapp.com/send?phone=+5491138950670&text=Hola Headshot 3D! Quisiera más información sobre un artículo" target="_blank" class="btn-wpp"><i class="fab fa-whatsapp p-1" style="color: white;"></i></a>
         <a href="https://instagram.com/headshot.3d" target="_blank" class="btn-ig"><i class="fab fa-instagram p-1" style="color: white;"></i></a>

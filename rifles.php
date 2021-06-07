@@ -70,6 +70,13 @@ include 'header.php';
         </div>
     </div>
 
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-12">
+                <a href="https://api.whatsapp.com/send?phone=+5491138950670&text=Hola Headshot 3D! Quisiera más información sobre un rifle" target="_blank" rel="noopener noreferrer"><button class="btn btn-success w-100">Consultá</button></a>
+            </div>
+        </div>
+    </div>
 
     <div class="container">
         <a href="https://api.whatsapp.com/send?phone=+5491138950670&text=Hola Headshot 3D! Quisiera más información sobre un artículo" target="_blank" class="btn-wpp"><i class="fab fa-whatsapp p-1" style="color: white;"></i></a>
