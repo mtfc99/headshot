@@ -10,10 +10,11 @@ include 'header.php';
 ?>
 
 <div class="container mt-5">
-    <div class="row text-center mb-5">
+    <div class="row text-center mb-3">
         <div class="col-md-12 text-center">
             <a href="catalogo.php"><button class="btn btn-outline-dark bg-none">Ver todas las armas</button></a>
         </div>
+        <small class="text-center text-muted mt-3">Recordá que si no ves acá el arma que buscás, me podés hablar a WhatsApp o Instagram y la hacemos sin problemas!</small>
     </div>
     <div class="row">
         <?php foreach ($aPistolas as $pistola) : ?>

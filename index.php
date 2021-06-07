@@ -148,33 +148,6 @@ include 'header.php'; ?>
     </div>
 
 
-
-<div class="container">
-
-    <div class="row">
-        <div class="col-6">
-        <blockquote class="twitter-tweet"><p lang="es" dir="ltr">Na bueno, cierren todo <a href="https://t.co/4G9vifIG71">pic.twitter.com/4G9vifIG71</a></p>&mdash; Ibarrinsta 🇦🇷 (@Ibarrista_) <a href="https://twitter.com/Ibarrista_/status/1400512498877538308?ref_src=twsrc%5Etfw">June 3, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
-        </div>
-    
-        <div class="col-6">
-        <blockquote class="twitter-tweet"><p lang="es" dir="ltr">Hoy no es un día cualquiera, hoy es el cumpleaños de McLovin. <a href="https://t.co/xUQ0FIKmhQ">pic.twitter.com/xUQ0FIKmhQ</a></p>&mdash; Rolita 🌐 (@_onerolita) <a href="https://twitter.com/_onerolita/status/1400572668513067016?ref_src=twsrc%5Etfw">June 3, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
-        </div>
-    
-    </div>
-
-    <div class="row">
-        <div class="col-6">
-        <blockquote class="twitter-tweet"><p lang="es" dir="ltr">RIÑÓN FIJO <a href="https://t.co/eY0uONM7ao">pic.twitter.com/eY0uONM7ao</a></p>&mdash; J. (@elmetalesasi) <a href="https://twitter.com/elmetalesasi/status/1400525847002558466?ref_src=twsrc%5Etfw">June 3, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>         </div>
-    
-        <div class="col-6">
-        <blockquote class="twitter-tweet"><p lang="es" dir="ltr">DIOS los chilenos nos hicieron un gol de pelota parada y re que el chileno más alto es este <a href="https://t.co/QiNMQkUDfv">pic.twitter.com/QiNMQkUDfv</a></p>&mdash; Palito (@xmilianx_) <a href="https://twitter.com/xmilianx_/status/1400613206079459335?ref_src=twsrc%5Etfw">June 4, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>         </div>
-    
-    </div>
-
-
-</div>
-
-
     <br><br>
     <?php include_once 'footer.php'; ?>
 

@@ -46,7 +46,7 @@ include 'header.php'; ?>
         </p>
       </div>
       <div class="col-md-8">
-        <img src="images/direccion.png" class="img-fluid" alt="">
+      <iframe width="600" height="450" style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ1cK8PwrIvJUR_NmvgH8qcAo&key=AIzaSyCkqIQXy-B4NnAn2Vf9jFKm04BkBVTxI0Y"></iframe> 
       </div>
     </div>
     <br>
