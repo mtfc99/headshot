@@ -72,7 +72,7 @@ include 'header.php';?>
           <h1 class="text-center my-3">¡Los productos también se pueden retirar por Zona Oeste!</h1>
             <p class="text-muted text-center">Nos encontramos a unas pocas cuadras de la Estación de Ramos Mejía</p>
           <div>
-          <img src="images/direccion.png" class="img-fluid" alt="" >
+          <iframe width="1320" height="550" style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ1cK8PwrIvJUR_NmvgH8qcAo&key=AIzaSyCkqIQXy-B4NnAn2Vf9jFKm04BkBVTxI0Y"></iframe> 
           </div>
 
         </div>

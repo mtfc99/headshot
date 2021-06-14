@@ -7,6 +7,23 @@ $aPistolas = $pistola->obtenerTodos();
 
 $title = 'Pistolas';
 include 'header.php';
+
+
+// SDK de Mercado Pago
+require 'vendor/autoload.php';
+// Agrega credenciales
+MercadoPago\SDK::setAccessToken('TEST-635331116948324-060716-2f798924aef191377c5240ad12d2b3ef-771755248');
+
+// Crea un objeto de preferencia
+$preference = new MercadoPago\Preference();
+
+// Crea un ítem en la preferencia
+$item = new MercadoPago\Item();
+$item->title = 'Seña de Pistola';
+$item->unit_price = 1500;
+$item->quantity = 1;
+$preference->items = array($item);
+$preference->save();
 ?>
 
 <div class="container mt-5">
@@ -14,7 +31,8 @@ include 'header.php';
         <div class="col-md-12 text-center">
             <a href="catalogo.php"><button class="btn btn-outline-dark bg-none">Ver todas las armas</button></a>
         </div>
-        <small class="text-center text-muted mt-3">Recordá que si no ves acá el arma que buscás, me podés hablar a WhatsApp o Instagram y la hacemos sin problemas!</small>
+        <small class="text-center text-muted mt-3">Si no ves acá el arma que buscás, comunicate por WhatsApp o Instagram y la hacemos sin problemas!</small>
+        <small class="text-center text-muted mt-3">La seña para todas las pistolas es de $1500</small>
     </div>
     <div class="row">
         <?php foreach ($aPistolas as $pistola) : ?>
@@ -83,6 +101,13 @@ include 'header.php';
         <div class="row mt-5">
             <div class="col-md-12">
                 <a href="https://api.whatsapp.com/send?phone=+5491138950670&text=Hola Headshot 3D! Quisiera más información sobre una pistola" target="_blank" rel="noopener noreferrer"><button class="btn btn-success w-100">Consultá</button></a>
+                
+            </div>
+
+        </div>
+        <div class="row text-center mt-2">
+            <div class="cho-container">
+
             </div>
         </div>
     </div>
@@ -100,6 +125,26 @@ include 'header.php';
 <?php include_once 'footer.php'; ?>
 
 
+<script src="https://sdk.mercadopago.com/js/v2"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+<script>
+// Agrega credenciales de SDK
+  const mp = new MercadoPago('TEST-efe11b02-27a2-41a3-bc9e-c46f0f486279', {
+        locale: 'es-AR'
+  });
+
+  // Inicializa el checkout
+  mp.checkout({
+      preference: {
+          id: '771755248'
+      },
+      render: {
+            container: '.cho-container', // Indica dónde se mostrará el botón de pago
+            label: 'Aboná tu seña', // Cambia el texto del botón de pago (opcional)
+      }
+});
+</script>
