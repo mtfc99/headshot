@@ -56,7 +56,7 @@ email":"test_user_25679740@testuser.com"} */
   // Inicializa el checkout
   mp.checkout({
       preference: {
-          id: '635331116948324'
+          id: 'PREFERENCE_ID'
       },
       render: {
             container: '.cho-container', // Indica dónde se mostrará el botón de pago
