@@ -24,6 +24,8 @@ include 'header.php';
         <a href="otros.php"><button class="btn bg-none btn-outline-dark px-5">Otros</button></a>
         </div>
         
+        <small class="text-center text-muted mt-3">Si no ves acá el arma que buscás, comunicate por WhatsApp o Instagram y la hacemos sin problemas!</small>
+        <small class="text-center text-muted mt-3">La seña para todas las armas es la mitad de su valor total</small>
        
     </div>
 
@@ -82,7 +84,10 @@ include 'header.php';
         <?php endforeach; ?>
     </div>
 </div>
+<?php
+    include_once 'pago-consulta.php';
 
+    ?>
 
 <div class="container">
     <a href="https://api.whatsapp.com/send?phone=+5491138950670&text=Hola Headshot 3D! Quisiera más información sobre un artículo" target="_blank" class="btn-wpp"><i class="fab fa-whatsapp p-1" style="color: white;"></i></a>
