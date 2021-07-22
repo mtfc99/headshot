@@ -8,22 +8,6 @@ $aPistolas = $pistola->obtenerTodos();
 $title = 'Pistolas';
 include 'header.php';
 
-
-// SDK de Mercado Pago
-require 'vendor/autoload.php';
-// Agrega credenciales
-MercadoPago\SDK::setAccessToken('TEST-635331116948324-060716-2f798924aef191377c5240ad12d2b3ef-771755248');
-
-// Crea un objeto de preferencia
-$preference = new MercadoPago\Preference();
-
-// Crea un ítem en la preferencia
-$item = new MercadoPago\Item();
-$item->title = 'Seña de Pistola';
-$item->unit_price = 1500;
-$item->quantity = 1;
-$preference->items = array($item);
-$preference->save();
 ?>
 
 <div class="container mt-5">
@@ -42,7 +26,7 @@ $preference->save();
                     <div class="ibox-content product-box">
                         <div class="frontcard">
                             <div>
-                                <img src="images/pistolas/<?php echo $pistola->imagen; ?>" alt="">
+                                <img src="images/pistolas/<?php echo $pistola->imagen; ?>" alt="" height="204" width="264">
                             </div>
                             <div class="product-desc">
 
@@ -97,10 +81,7 @@ $preference->save();
         <?php endforeach; ?>
     </div>
 
-    <?php
-    include_once 'pago-consulta.php';
 
-    ?>
     <div class="container">
         <a href="https://api.whatsapp.com/send?phone=+5491138950670&text=Hola Headshot 3D! Quisiera más información sobre un artículo" target="_blank" class="btn-wpp"><i class="fab fa-whatsapp p-1" style="color: white;"></i></a>
         <a href="https://instagram.com/headshot.3d" target="_blank" class="btn-ig"><i class="fab fa-instagram p-1" style="color: white;"></i></a>

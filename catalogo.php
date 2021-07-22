@@ -84,10 +84,6 @@ include 'header.php';
         <?php endforeach; ?>
     </div>
 </div>
-<?php
-    include_once 'pago-consulta.php';
-
-    ?>
 
 <div class="container">
     <a href="https://api.whatsapp.com/send?phone=+5491138950670&text=Hola Headshot 3D! Quisiera más información sobre un artículo" target="_blank" class="btn-wpp"><i class="fab fa-whatsapp p-1" style="color: white;"></i></a>
