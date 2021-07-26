@@ -9,7 +9,6 @@ $title = 'Pistolas';
 include 'header.php';
 
 ?>
-
 <div class="container mt-5">
     <div class="row text-center mb-3">
         <div class="col-md-12 text-center">
@@ -61,11 +60,12 @@ include 'header.php';
                                                             </button>
                                                         </div>
                                                         <div class="modal-body">
-                                                            <img class="img-fluid" src="images/pistolas/<?php echo $pistola->imagenmodal; ?>" alt="">
+                                                            <img class="img-fluid" src="images/pistolas/<?php echo $pistola->imagen; ?>" alt="">
                                                             <p class="text-lead text-center mt-3"><?php echo $pistola->descripcion; ?></p>
                                                         </div>
                                                         <div class="modal-footer">
-                                                            <button type="button" class="btn btn-warning rounded-pill" data-dismiss="modal">Cerrar</button>
+                                                            <a target="_blank" href="https://api.whatsapp.com/send?phone=+5491138950670&text=Hola Headshot 3D! Quisiera más información <?php echo " sobre " . $pistola->nombre; ?>"><button class="btn btn-success rounded-pill" type="button">¡Comunicate!</button></a>
+                                                            <button type="button" class="btn btn-danger rounded-pill" data-dismiss="modal">Cerrar</button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -83,10 +83,9 @@ include 'header.php';
 
 
     <div class="container">
-        <a href="https://api.whatsapp.com/send?phone=+5491138950670&text=Hola Headshot 3D! Quisiera más información sobre un artículo" target="_blank" class="btn-wpp"><i class="fab fa-whatsapp p-1" style="color: white;"></i></a>
-        <a href="https://instagram.com/headshot.3d" target="_blank" class="btn-ig"><i class="fab fa-instagram p-1" style="color: white;"></i></a>
-        <a href="https://twitter.com" target="_blank" class="btn-tw"><i class="fab fa-twitter p-1" style="color: white;"></i></a>
-        <a href="https://youtube.com" target="_blank" class="btn-yt"><i class="fab fa-youtube p-1" style="color: white;"></i></a>
+    <?php
+    include_once 'rrss.php';
+    ?>
     </div>
 
     <br><br><br><br><br><br><br><br><br><br>
@@ -99,4 +98,3 @@ include 'header.php';
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-

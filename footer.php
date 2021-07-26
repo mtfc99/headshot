@@ -1,4 +1,4 @@
-<footer class="bg-dark text-white">
+<footer class="text-white" id="footerGeneral">
   <!-- Grid container -->
   <div class="container-fluid">
     <div class="row">
@@ -25,7 +25,7 @@
       </div>
       <div class="col-md-3 mt-4 text-center">
         <p>Headshot 3D - 3D Print ®</p>
-
+       <a href="ingreso.php"><small>Administrador</small></a>
       </div>
     </div>
   </div>
