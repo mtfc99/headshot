@@ -12,16 +12,23 @@ session_start();
 <div class="row mt-5">
 
 <div class="col-md-3">
-    <a href="pistolas-formulario.php"><button class="btn btn-dark rounded-pill">Agregar Pistolas</button></a>
+    <a href="pistolas-formulario.php"><button class="btn my-3 btn-dark">Agregar Pistolas</button></a> <br>
+    <a href="pistolas-modificar.php"><button class="btn my-3 btn-secondary">Modificar Pistolas</button></a>
 </div>
 <div class="col-md-3">
-    <a href="rifles-formulario.php"><button class="btn btn-dark rounded-pill">Agregar Rifles</button></a>
+    <a href="rifles-formulario.php"><button class="btn my-3 btn-dark">Agregar Rifles</button></a><br>
+    <a href="rifles-modificar.php"><button class="btn my-3 btn-secondary">Modificar rifles</button></a>
+
 </div>
 <div class="col-md-3">
-    <a href="escopetas-formulario.php"><button class="btn btn-dark rounded-pill">Agregar Escopetas</button></a>
+    <a href="escopetas-formulario.php"><button class="btn my-3 btn-dark">Agregar Escopetas</button></a><br>
+    <a href="escopetas-modificar.php"><button class="btn my-3 btn-secondary">Modificar escopetas</button></a>
+
 </div>
 <div class="col-md-3">
-    <a href="otros-formulario.php"><button class="btn btn-dark rounded-pill">Agregar Otros</button></a>
+    <a href="otros-formulario.php"><button class="btn my-3 btn-dark">Agregar Otros</button></a><br>
+    <a href="otros-modificar.php"><button class="btn my-3 btn-secondary">Modificar otros</button></a>
+
 </div>
 
 

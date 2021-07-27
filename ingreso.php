@@ -1,7 +1,6 @@
 <?php
-$title = 'Ingreso';
 include 'header.php';
-
+$title = 'Ingreso';
 session_start();
 
 
@@ -24,8 +23,8 @@ if ($_POST) { //si es post, entonces:
 
 
 <div class="container">
-    <div class="row my-4 p-5">
-        <div class="col-md-6 card offset-3">
+    <div class="row my-4 p-5 justify-content-around"> <!--Justify-content-around centra la row-->
+        <div class="col-md-4 card">
             <h3 class="text-center mt-2">Ingreso para Administrador</h3>
             <form class="text-center" action="" class="user" method="POST">
                 <label for="txtUsuario">Usuario</label><br>
@@ -34,7 +33,7 @@ if ($_POST) { //si es post, entonces:
                 <input type="password" name="txtClave" id="txtClave" class="form-control rounded-pill mb-3">
                 <br>
                 <button type="submit" class="btn btn-dark btn-user btn-block rounded-pill mb-3">
-                    Entrar
+                    Ingresar
                 </button>
             </form>
 

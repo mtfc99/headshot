@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="fontawesome/css/fontawesome.min.css">
         <link rel="stylesheet" href="fontawesome/css/regular.min.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link rel="stylesheet" href="css/estilos.css?v=5533">
+        <link rel="stylesheet" href="css/estilos.css?v=5523">
         <script src="js/bootstrap.min.js"></script>
         <script src="js/index.js"></script>
         <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -23,7 +23,7 @@
         <nav class="navbar navbar-expand-lg navbar-light" id="navbar">
 
             <a class="navbar-brand ms-md-5 ps-md-5" href="index.php"><img src="images/logo1.png" alt="" width="160px" height="80px"></a>
-            <button class="navbar-toggler btn-light text-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler bg-light btn-light text-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 

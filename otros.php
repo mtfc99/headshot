@@ -23,7 +23,8 @@ include 'header.php';
                 <div class="ibox">
                     <div class="ibox-content product-box">
                         <div>
-                            <img src="images/otros/<?php echo $otro->imagen; ?>" alt="" height="204" width="264">
+                            
+                            <img src="images/otros/<?php echo $otro->imagen; ?>" alt="<?php echo $otro->nombre ?>" height="204" width="264">
                         </div>
                         <div class="product-desc">
                             <small class="text-muted">Otros</small>
@@ -53,7 +54,7 @@ include 'header.php';
                                                 </button>
                                             </div>
                                             <div class="modal-body">
-                                                <img class="img-fluid" src="images/otros/<?php echo $otro->imagen; ?>" alt="">
+                                                <img class="img-fluid" src="images/otros/<?php echo $otro->imagen; ?>" alt="<?php echo $otro->nombre ?>">
                                                 <p class="text-lead text-center mt-3"><?php echo $otro->descripcion; ?></p>
                                             </div>
                                             <div class="modal-footer">

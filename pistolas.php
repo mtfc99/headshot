@@ -25,7 +25,7 @@ include 'header.php';
                     <div class="ibox-content product-box">
                         <div class="frontcard">
                             <div>
-                                <img src="images/pistolas/<?php echo $pistola->imagen; ?>" alt="" height="204" width="264">
+                                <img src="images/pistolas/<?php echo $pistola->imagen; ?>" alt="<?php echo $pistola->nombre ?>" height="204" width="264">
                             </div>
                             <div class="product-desc">
 
@@ -60,7 +60,7 @@ include 'header.php';
                                                             </button>
                                                         </div>
                                                         <div class="modal-body">
-                                                            <img class="img-fluid" src="images/pistolas/<?php echo $pistola->imagen; ?>" alt="">
+                                                            <img class="img-fluid" src="images/pistolas/<?php echo $pistola->imagen; ?>" alt="<?php echo $pistola->nombre ?>">
                                                             <p class="text-lead text-center mt-3"><?php echo $pistola->descripcion; ?></p>
                                                         </div>
                                                         <div class="modal-footer">

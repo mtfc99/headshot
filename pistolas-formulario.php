@@ -14,7 +14,7 @@ if ($_POST) {
         if (isset($_GET["id"]) && $_GET["id"] > 0) {
             //Actualizo un cliente existente
             $pistola->actualizar();
-            header("Location: pistolas.php");
+            $success='<div class="alert alert-success">Cambios efectuados correctamente</div>';
         } else {
             //Es nuevo
             $pistola->insertar();
@@ -26,13 +26,23 @@ if ($_POST) {
     }
 }
 
+if (isset($_GET["id"]) && $_GET["id"] > 0) { /*Si hay un ID seteado via GET (en la URL), lo cual es el caso, se ejecuta la query obtenerPorId(); */
+    $pistola->obtenerPorId();
+}
+
 include 'header.php';
 
 ?>
 
 <div class="container">
+<?php
+    if(isset($success)){
+    echo $success;
+}
+    ?>
 <div class="row mt-5">
-   <a href="agregar-armas.php"><button class="btn btn-warning">Agregar otras armas</button></a> 
+    <div class="col-md-4"> <a href="agregar-armas.php"><button class="btn btn-warning">Agregar otras armas</button></a> </div>
+  
 </div>
     <form enctype=“multipart/form-data” method="POST">
     <div class="row mt-5">
@@ -59,6 +69,7 @@ include 'header.php';
 </div>
 <button type="submit" class="btn btn-primary my-5" id="btnGuardar" name="btnGuardar">Guardar</button>
 <button type="submit" class="btn btn-danger px-4" id="btnBorrar" name="btnBorrar">Borrar</button>
+<a href="pistolas.php"><button type="button" class="btn btn-success px-4" id="btnBorrar" name="btnBorrar">Ver Listado</button></a> 
 </form>
         </div>
 
