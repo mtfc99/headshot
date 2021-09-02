@@ -63,8 +63,8 @@ include 'header.php';
                                                 </div>
                                                 <div class="modal-footer">
 
-                                                    <a target="_blank" href="https://api.whatsapp.com/send?phone=+5491138950670&text=Hola Headshot 3D! Quisiera más información <?php echo " sobre " . $escopeta->nombre; ?>"><button class="btn btn-success rounded-pill" type="button">¡Comunicate!</button></a>
-                                                    <button type="button" class="btn btn-danger rounded-pill" data-dismiss="modal">Cerrar</button>
+                                                    <a target="_blank" href="https://api.whatsapp.com/send?phone=+5491138950670&text=Hola Headshot 3D! Quisiera más información <?php echo " sobre " . $escopeta->nombre; ?>"><button class="btn btn-success rounded-pill" type="button"><i class="fab fa-whatsapp"></i> ¡Comunicate!</button></a>
+                                                    <button type="button" class="btn btn-danger rounded-pill" data-dismiss="modal">Cerrar <i class="far fa-times-circle"></i></button>
                                                 </div>
                                             </div>
                                         </div>

@@ -89,16 +89,39 @@ class Rifle {
         $mysqli->close();
     }
 
+    public function obtenerPorId()
+    {
+        $mysqli = new mysqli(Config::BBDD_HOST, Config::BBDD_USUARIO, Config::BBDD_CLAVE, Config::BBDD_NOMBRE);
+        $sql = "SELECT idrifle,
+                        nombre,
+                        precio,
+                        descripcion
+                FROM rifles
+                WHERE idrifle = $this->idrifle";
+        if (!$resultado = $mysqli->query($sql)) {
+            printf("Error en query: %s\n", $mysqli->error . " " . $sql);
+        }
+
+        //Convierte el resultado en un array asociativo
+        if ($fila = $resultado->fetch_assoc()) {
+            $this->idrifle = $fila["idrifle"];
+            $this->nombre = $fila["nombre"];
+            $this->precio = $fila["precio"];
+            $this->descripcion = $fila["descripcion"];
+        }
+        $mysqli->close();
+
+    }
 
     public function actualizar()
     {
 
         $mysqli = new mysqli(Config::BBDD_HOST, Config::BBDD_USUARIO, Config::BBDD_CLAVE, Config::BBDD_NOMBRE);
         $sql = "UPDATE rifles SET
-                nombre = '" . $this->nombre . "',
-                precio = '" . $this->precio . "',
-                descripcion = '" . $this->descripcion . "'
-                WHERE idrifle = " . $this->idrifle;
+                nombre = '$this->nombre',
+                precio = '$this->precio',
+                descripcion = '$this->descripcion'
+                WHERE idrifle = $this->idrifle" ;
 
         if (!$mysqli->query($sql)) {
             printf("Error en query: %s\n", $mysqli->error . " " . $sql);

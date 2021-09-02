@@ -40,10 +40,10 @@ include 'header.php';
                                 </div>
                                 <div>
                                     <div class="row">
-                                        <div class="col-md-3">
+                                        <div class="col-md-12">
                                             <!-- Button trigger modal -->
                                             <button type="button" class="btn btn-warning rounded-pill" data-toggle="modal" data-target="#exampleModal<?php echo $pistola->idpistola; ?>">
-                                                Info
+                                            <i class="fas fa-info-circle"></i> Info
                                             </button>
 
                                             <!-- Modal -->
@@ -64,8 +64,8 @@ include 'header.php';
                                                             <p class="text-lead text-center mt-3"><?php echo $pistola->descripcion; ?></p>
                                                         </div>
                                                         <div class="modal-footer">
-                                                            <a target="_blank" href="https://api.whatsapp.com/send?phone=+5491138950670&text=Hola Headshot 3D! Quisiera más información <?php echo " sobre " . $pistola->nombre; ?>"><button class="btn btn-success rounded-pill" type="button">¡Comunicate!</button></a>
-                                                            <button type="button" class="btn btn-danger rounded-pill" data-dismiss="modal">Cerrar</button>
+                                                            <a target="_blank" href="https://api.whatsapp.com/send?phone=+5491138950670&text=Hola Headshot 3D! Quisiera más información <?php echo " sobre " . $pistola->nombre; ?>"><button class="btn btn-success rounded-pill" type="button"><i class="fab fa-whatsapp"></i> ¡Comunicate!</button></a>
+                                                            <button type="button" class="btn btn-danger rounded-pill" data-dismiss="modal">Cerrar <i class="far fa-times-circle"></i></button>
                                                         </div>
                                                     </div>
                                                 </div>

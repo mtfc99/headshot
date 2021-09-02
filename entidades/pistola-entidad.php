@@ -8,16 +8,19 @@ class Pistola
     private $descripcion;
     private $imagen;
     private $imagenmodal;
-    
 
-    public function __construct(){
+
+    public function __construct()
+    {
     }
 
-    public function __get($atributo){
+    public function __get($atributo)
+    {
         return $this->$atributo;
     }
 
-    public function __set($atributo, $valor){
+    public function __set($atributo, $valor)
+    {
         $this->$atributo = $valor;
         return $this;
     }
@@ -51,7 +54,7 @@ class Pistola
                 $obj->descripcion = $fila["descripcion"];
                 $obj->imagen = $fila["imagen"];
                 $obj->imagenmodal = $fila["imagenmodal"];
-                
+
                 $aPistolas[] = $obj;
             }
             return $aPistolas;
@@ -99,8 +102,7 @@ class Pistola
         $sql = "SELECT idpistola,
                         nombre,
                         precio,
-                        descripcion
-                       
+                        descripcion                     
                 FROM pistolas
                 WHERE idpistola = $this->idpistola";
         if (!$resultado = $mysqli->query($sql)) {
@@ -115,9 +117,7 @@ class Pistola
             $this->descripcion = $fila["descripcion"];
         }
         $mysqli->close();
-
     }
-
 
     public function actualizar()
     {
@@ -145,5 +145,4 @@ class Pistola
         }
         $mysqli->close();
     }
-
 }

@@ -1,7 +1,6 @@
 <?php
 
-class Escopeta
-{
+class Escopeta {
     private $idescopeta;
     private $nombre;
     private $descripcion;
@@ -10,24 +9,21 @@ class Escopeta
     private $imagenmodal;
     
 
-    public function __construct()
-    {
+    public function __construct(){
+
     }
 
-    public function __get($atributo)
-    {
+    public function __get($atributo) {
         return $this->$atributo;
     }
 
-    public function __set($atributo, $valor)
-    {
+    public function __set($atributo, $valor) {
         $this->$atributo = $valor;
         return $this;
     }
 
 
-    public function obtenerTodos()
-    {
+  public function obtenerTodos(){
         $aEscopetas = array();
         $mysqli = new mysqli(Config::BBDD_HOST, Config::BBDD_USUARIO, Config::BBDD_CLAVE, Config::BBDD_NOMBRE);
         $sql = "SELECT
@@ -41,10 +37,10 @@ class Escopeta
     escopetas 
 
 	ORDER BY idescopeta ASC";
+
         $resultado = $mysqli->query($sql);
 
-        $aEscopetas = array();
-        if ($resultado) {
+        if($resultado){
             while ($fila = $resultado->fetch_assoc()) {
                 $obj = new Escopeta();
                 $obj->idescopeta = $fila["idescopeta"];
@@ -61,7 +57,7 @@ class Escopeta
 
     public function cargarFormulario($request)
     {
-        $this->idrifle = isset($request["id"]) ? $request["id"] : "";
+        $this->idescopeta = isset($request["id"]) ? $request["id"] : "";
         $this->nombre = isset($request["txtNombre"]) ? $request["txtNombre"] : "";
         $this->precio = isset($request["txtPrecio"]) ? $request["txtPrecio"] : "";
         $this->descripcion = isset($request["txtDescripcion"]) ? $request["txtDescripcion"] : "";
@@ -93,16 +89,39 @@ class Escopeta
         $mysqli->close();
     }
 
+    public function obtenerPorId()
+    {
+        $mysqli = new mysqli(Config::BBDD_HOST, Config::BBDD_USUARIO, Config::BBDD_CLAVE, Config::BBDD_NOMBRE);
+        $sql = "SELECT idescopeta,
+                        nombre,
+                        precio,
+                        descripcion
+                FROM escopetas
+                WHERE idescopeta = $this->idescopeta";
+        if (!$resultado = $mysqli->query($sql)) {
+            printf("Error en query: %s\n", $mysqli->error . " " . $sql);
+        }
+
+        //Convierte el resultado en un array asociativo
+        if ($fila = $resultado->fetch_assoc()) {
+            $this->idescopeta = $fila["idescopeta"];
+            $this->nombre = $fila["nombre"];
+            $this->precio = $fila["precio"];
+            $this->descripcion = $fila["descripcion"];
+        }
+        $mysqli->close();
+
+    }
 
     public function actualizar()
     {
 
         $mysqli = new mysqli(Config::BBDD_HOST, Config::BBDD_USUARIO, Config::BBDD_CLAVE, Config::BBDD_NOMBRE);
         $sql = "UPDATE escopetas SET
-                nombre = '" . $this->nombre . "',
-                precio = '" . $this->precio . "',
-                descripcion = '" . $this->descripcion . "'
-                WHERE idescopeta = " . $this->idescopeta;
+                nombre = '$this->nombre',
+                precio = '$this->precio',
+                descripcion = '$this->descripcion'
+                WHERE idescopeta = $this->idescopeta" ;
 
         if (!$mysqli->query($sql)) {
             printf("Error en query: %s\n", $mysqli->error . " " . $sql);
@@ -120,4 +139,7 @@ class Escopeta
         }
         $mysqli->close();
     }
+
 }
+
+

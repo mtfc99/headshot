@@ -57,7 +57,7 @@ include 'header.php'; ?>
                     <hr>
                     <p class="text-muted text-center">En nuestro catálogo vas a poder encontrar armas que realizamos anteriormente, por lo que su realización es más rápida.
                     </p>
-                    <a href="catalogo.php" class="text-center"><button class="btn btn-dark rounded-pill mt-5 px-5">Ir al
+                    <a href="catalogo.php" class="text-center"><button class="btn btn-dark rounded-pill mt-5 px-5"><i class="fas fa-columns"></i> Ir al
                             catálogo</button></a>
                 </div>
 
@@ -68,7 +68,7 @@ include 'header.php'; ?>
                     <p class="text-center display-6">Otras Armas</p>
                     <hr>
                     <p class="text-muted text-center">También vendemos armas que hicimos muy pocas veces o que nunca hicimos. Si no encontrás la que buscás, la hacemos igual.</p>
-                    <a href="https://api.whatsapp.com/send?phone=+5491138950670&text=Hola Headshot 3D! Quisiera más información sobre un artículo" target="_blank" class="text-center"><button class="btn btn-dark rounded-pill mt-5 px-5">¡Comunicate!</button></a>
+                    <a href="https://api.whatsapp.com/send?phone=+5491138950670&text=Hola Headshot 3D! Quisiera más información sobre un artículo no publicado" target="_blank" class="text-center"><button class="btn btn-dark rounded-pill mt-5 px-5"><i class="fab fa-whatsapp"></i> ¡Comunicate!</button></a>
                 </div>
 
             </div>
@@ -78,7 +78,7 @@ include 'header.php'; ?>
                     <p class="text-center display-6">Objetos</p>
                     <hr>
                     <p class="text-muted text-center">¡También realizamos cualquier tipo de objetos en 3D! Comunicate con nosotros por cualquier consulta que tengas.</p>
-                    <a href="https://api.whatsapp.com/send?phone=+5491138950670&text=Hola Headshot 3D! Quisiera más información sobre un artículo" target="_blank" class="text-center"><button class="btn btn-dark rounded-pill mt-5 px-5">¡Comunicate!</button></a>
+                    <a href="https://api.whatsapp.com/send?phone=+5491138950670&text=Hola Headshot 3D! Quisiera más información sobre un artículo" target="_blank" class="text-center"><button class="btn btn-dark rounded-pill mt-5 px-5"><i class="fab fa-whatsapp"></i> ¡Comunicate!</button></a>
                 </div>
 
             </div>
@@ -88,7 +88,7 @@ include 'header.php'; ?>
                     <p class="text-center display-6">Pagos</p>
                     <hr>
                     <p class="text-muted text-center">Deseamos darle a los clientes comodidad a la hora de comprar, por eso aceptamos diversos métodos de pago.</p>
-                    <button type="button" class="btn btn-dark rounded-pill mt-5 px-5" data-toggle="modal" data-target="#modalPagos">Medios de Pago</button>
+                    <button type="button" class="btn btn-dark rounded-pill mt-5 px-5" data-toggle="modal" data-target="#modalPagos"><i class="far fa-credit-card"></i> Medios de Pago</button>
                    
                 </div>
 
