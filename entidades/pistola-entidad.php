@@ -78,12 +78,15 @@ class Pistola
         $sql = "INSERT INTO pistolas (
                     nombre,
                     precio,
-                    descripcion
+                    descripcion,
+                    imagen
+                    
                     
                 ) VALUES (
                     '$this->nombre',
                     '$this->precio',
-                    '$this->descripcion'
+                    '$this->descripcion',
+                    '$this->imagen'
                 );";
         // print_r($sql);exit;
         //Ejecuta la query
@@ -92,6 +95,9 @@ class Pistola
         }
         //Obtiene el id generado por la inserción
         $this->idpistola = $mysqli->insert_id;
+
+        
+
         //Cierra la conexión
         $mysqli->close();
     }
@@ -102,7 +108,8 @@ class Pistola
         $sql = "SELECT idpistola,
                         nombre,
                         precio,
-                        descripcion                     
+                        descripcion,
+                        imagen                    
                 FROM pistolas
                 WHERE idpistola = $this->idpistola";
         if (!$resultado = $mysqli->query($sql)) {
@@ -115,6 +122,7 @@ class Pistola
             $this->nombre = $fila["nombre"];
             $this->precio = $fila["precio"];
             $this->descripcion = $fila["descripcion"];
+            $this->imagen = $fila["imagen"];
         }
         $mysqli->close();
     }
@@ -126,7 +134,8 @@ class Pistola
         $sql = "UPDATE pistolas SET
                 nombre = '$this->nombre',
                 precio = '$this->precio',
-                descripcion = '$this->descripcion'
+                descripcion = '$this->descripcion',
+                imagen = '$this->imagen'
                 WHERE idpistola = $this->idpistola";
 
         if (!$mysqli->query($sql)) {

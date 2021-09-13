@@ -8,50 +8,53 @@ $title = 'Ingresar Pistolas';
 $pistola = new Pistola();
 $pistola->cargarFormulario($_REQUEST);
 
-if ($_POST) {
+if($_POST){
+    if(isset($_POST["btnGuardar"])){
+    	$nombreImagen = "";
+        if($_FILES['imagen']["error"] === UPLOAD_ERR_OK){
+          $nombreRandom = date("Ymdhmsi");
+          $archivoTmp = $_FILES['imagen']["tmp_name"];
+          $nombreArchivo = $_FILES['imagen']["name"];
+          $extension = pathinfo($nombreArchivo, PATHINFO_EXTENSION);
+          $nombreImagen = "$nombreRandom.$extension";
+          move_uploaded_file($archivoTmp, "images/$nombreImagen");
+        }
 
-    if (isset($_POST["btnGuardar"])) {
-        if (isset($_GET["id"]) && $_GET["id"] > 0) {
+        if(isset($_GET["id"]) && $_GET["id"] > 0){
+            $pistolaAnt = new Pistola();
+            $pistolaAnt->idpistola = $_GET["id"];
+            $pistolaAnt->obtenerPorId();
+            $imagenAnterior = $pistolaAnt->imagen;
+
+            //Si es una actualizacion y se sube una imagen, elimina la anterior
+            if($_FILES['imagen']["error"] === UPLOAD_ERR_OK){
+                if(!$imagenAnterior != ""){
+                        unlink($imagenAnterior);
+                }
+            } else {
+                //Si no viene ninguna imagen, setea como imagen la que habia previamente
+                $nombreImagen= $imagenAnterior;
+            }
+
+            $pistola->imagen = $nombreImagen;
             //Actualizo un cliente existente
             $pistola->actualizar();
-            $success = '<div class="alert alert-success">Cambios efectuados correctamente</div>';
         } else {
             //Es nuevo
+            $pistola->imagen = $nombreImagen;
             $pistola->insertar();
-            header("Location: pistolas.php");
         }
-    } else if (isset($_POST["btnBorrar"])) {
+    } else if(isset($_POST["btnBorrar"])){
         $pistola->eliminar();
         header("Location: pistolas.php");
     }
-
-     // If upload button is clicked ...
- if($_FILES['imagen']['error']===UPLOAD_ERR_OK){
-    $nombreAleatorio = date('Ymdhmsi');
-    $archivo_tmp = $_FILES['imagen']['tmp_name'];
-    $nombreArchivo = $_FILES['imagen']['name'];
-    $extension = pathinfo($nombreArchivo,PATHINFO_EXTENSION);
-    $nuevoNombre = "$nombreAleatorio.$extension";
-    move_uploaded_file($archivo_tmp, "images/pistolas/$nuevoNombre"); 
-   }
-
-   if ($id != ""){ //Estoy actualizando o editando uno existente
-    // Si no se subio la imagen
-    if ($_FILES["imagen"]["error"] !== UPLOAD_ERR_OK) { // Si no se subió la imagen:
-        $nuevoNombre = $aClientes[$id]["imagen"]; // Mantengo el nombre actual que ya existía en la imagen
-    } else {
-        unlink("images/pistolas/" . $aClientes[$id]["imagen"]); // Si viene la imagen, elimino la imagen anterior y guardo el nombre de la nueva imagen
-    }
-}
-}
-
-if (isset($_GET["id"]) && $_GET["id"] > 0) { /*Si hay un ID seteado via GET (en la URL), lo cual es el caso, se ejecuta la query obtenerPorId(); */
+} 
+if(isset($_GET["id"]) && $_GET["id"] > 0){
     $pistola->obtenerPorId();
+
 }
 
 include 'header.php';
-
-
 
 ?>
 
@@ -85,7 +88,7 @@ include 'header.php';
         </div>
         <div class="row">
             <div class="col-md-4">
-            <input type="file" name="imagen" id="imagen" value='Agregar Imagen'>
+            <input type="file" name="imagen" id="imagen">
             </div>
 
         </div>

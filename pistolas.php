@@ -8,6 +8,8 @@ $aPistolas = $pistola->obtenerTodos();
 $title = 'Pistolas';
 include 'header.php';
 
+
+
 ?>
 <div class="container mt-5">
     <div class="row text-center mb-3">
@@ -60,7 +62,7 @@ include 'header.php';
                                                             </button>
                                                         </div>
                                                         <div class="modal-body">
-                                                            <img class="img-fluid" src="images/pistolas/<?php echo $pistola->imagen; ?>" alt="<?php echo $pistola->nombre ?>">
+                                                            <img class="img-fluid" src="files/<?php echo $pistola->imagen; ?>" alt="<?php echo $pistola->nombre ?>">
                                                             <p class="text-lead text-center mt-3"><?php echo $pistola->descripcion; ?></p>
                                                         </div>
                                                         <div class="modal-footer">
